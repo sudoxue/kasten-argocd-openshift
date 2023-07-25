@@ -1,8 +1,9 @@
 ## Installing K10 with token authentication on Openshift
 
-If you haven't setup the Argo CD on openshift cluster yet, follow the instructions here
+**Pre-requisites**: 
+If you haven't setup the Argo CD on openshift cluster yet, follow the instructions [here](https://github.com/smohandass/kasten-argocd-openshift/blob/main/README.md)
 
-Create the namespace where K10 will be installed and provide the Argo CD service account the admin role on the namespace. 
+Create the namespace where K10 will be installed on the openshift cluster and provide the Argo CD service account the admin role on the namespace. 
 
 ```
 oc new-project kasten-io
@@ -14,8 +15,7 @@ oc adm policy add-role-to-user admin \
 
 Argo CD application can be created either using the argocd cli or using a yaml file. 
 
-To install K10 using argoCD cli by running the following command
-
+To install K10 using argoCD cli run the command
 ```
 argocd app create k10-install \
       --app-namespace openshift-gitops \
