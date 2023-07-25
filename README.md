@@ -34,4 +34,4 @@ To access the Argo CD UI, click the cube icon on the top right corner in openshi
 
 ## Installing Kasten
 
-Installing Kasten using Token Auth : 
+Installing Kasten with Token Authentication : [k10-install/token-auth/README.md](https://github.com/smohandass/kasten-argocd-openshift/blob/main/k10-install/token-auth/README.md)
