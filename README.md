@@ -33,7 +33,7 @@ oc adm  policy add-cluster-role-to-user cluster-admin \
 
 Applications in Argo CD can be managed either by using the Arco CD UI or by using the argocd cli. 
 
-To install the argocd cli using the instructions from [here](https://argo-cd.readthedocs.io/en/stable/cli_installation/). 
+To install the argocd cli use the instructions from [here](https://argo-cd.readthedocs.io/en/stable/cli_installation/). 
 
 To access the Argo CD UI, click the cube icon on the top right corner in openshift console and click `Cluster Argo CD`. The default user to login is `admin`. Password can be retrieved from the secret `openshift-gitops-cluster` using the following oc command.
 
