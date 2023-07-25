@@ -1,18 +1,4 @@
 ---
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  annotations:
-    olm.providedAPIs: CDI.v1beta1.cdi.kubevirt.io,HostPathProvisioner.v1beta1.hostpathprovisioner.kubevirt.io,HyperConverged.v1beta1.hco.kubevirt.io,KubeVirt.v1.kubevirt.io,NetworkAddonsConfig.v1.networkaddonsoperator.network.kubevirt.io,SSP.v1beta1.ssp.kubevirt.io,TektonTasks.v1alpha1.tektontasks.kubevirt.io
-    argocd.argoproj.io/sync-wave: "1"
-  name: openshift-cnv-og
-  generateName: openshift-cnv-
-  namespace: openshift-cnv
-spec:
-  targetNamespaces:
-  - openshift-cnv
-  upgradeStrategy: Default
----
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
@@ -21,7 +7,7 @@ metadata:
   labels:
     operators.coreos.com/kubevirt-hyperconverged.openshift-cnv: ""
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   channel: stable
   installPlanApproval: Automatic
