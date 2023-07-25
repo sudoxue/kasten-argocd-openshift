@@ -1,10 +1,17 @@
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kasten-io
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
   annotations:
     olm.providedAPIs: K10.v1alpha1.apik10.kasten.io,K10restore.v1alpha1.apik10.kasten.io
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
   name: k10-kasten-operator-rhmp 
   namespace: kasten-io
 spec:
@@ -20,7 +27,7 @@ metadata:
   labels:
     operators.coreos.com/k10-kasten-operator-rhmp.kasten-io: ""
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   channel: stable
   installPlanApproval: Automatic
@@ -35,7 +42,7 @@ metadata:
   name: k10
   namespace: kasten-io
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   auth:
     basicAuth:
