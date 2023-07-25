@@ -23,6 +23,14 @@ Once the "Red Hat OpenShift GitOps" operator is installed,
 
 This will create an instance of Argo CD in the `openshift-gitops` namespace.
 
+Assign the cluster-admin role to Argo CD service account for managing the cluster configurations
+
+```
+oc adm  policy add-cluster-role-to-user cluster-admin \
+        -z openshift-gitops-argocd-application-controller \
+        -n openshift-gitops
+```
+
 Applications in Argo CD can be managed either by using the Arco CD UI or by using the argocd cli. 
 
 To install the argocd cli using the instructions from [here](https://argo-cd.readthedocs.io/en/stable/cli_installation/). 
