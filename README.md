@@ -5,6 +5,7 @@ Argo CD is an open-source continuous delivery (CD) tool to automate the deplymen
 
 1. Prerequisites
 2. Installing Kasten using ArgoCD application
+3. Installing Openshift Virtualization using ArgoCD application
 
 ## Prerequisites
 Prior to applying the examples defined in this project, ArgoCD need to be setup on the cluster. ArgoCD can be installed on Openshift clusters using the "Red Hat OpenShift GitOps" certified operator. To install the operator
@@ -43,3 +44,9 @@ To access the Argo CD UI, click the cube icon on the top right corner in openshi
 ## Installing Kasten
 
 Installing Kasten with Token Authentication : [k10-install/token-auth/README.md](https://github.com/smohandass/kasten-argocd-openshift/blob/main/k10-install/token-auth/README.md)
+
+## Installing Openshift Virtualization
+
+Installing Openshift Virtualization : [virtualization-install/README.md](https://github.com/smohandass/kasten-argocd-openshift/blob/main/virtualization-install/README.md)
+
+
